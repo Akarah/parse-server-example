@@ -1,3 +1,4 @@
-Parse.Cloud.define('hello', function(req, res) {
-  return 'Hi';
+Parse.Cloud.define("getServerTime", function(request, response) {
+  var dateToday = new Date();
+  response.success(dateToday.toDateString());
 });

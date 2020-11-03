@@ -1,5 +1,9 @@
-var moment = require('moment-timezone');
+var timezone = require('moment-timezone');
+var moment = require('moment');
 
 Parse.Cloud.define("getServerTime", function(request, response) {
-  return moment().format();
+
+  let timezone = timezone().format().substr(id.length - 5)
+
+  return moment().format("YYYY-MM-DDTHH:mm:ss.SSS") + timezone;
 });
